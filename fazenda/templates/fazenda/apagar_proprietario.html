@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apagar Proprietário</title>
+</head>
+<body>
+    <h1>Deseja realmente apagar o proprietário: {{ proprietario.nome }}?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Sim, apagar</button>
+    </form>
+    <a href="/proprietarios/">Cancelar</a>
+</body>
+</html>
